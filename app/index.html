@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice Legends — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <p class="kicker">Grand Theft Auto VI · PlayStation 5</p>
+  <h1>Vice Legends</h1>
+  <p class="sub">The offline guide and tracker for all 55 trophies — 1 platinum, 2 gold, 6 silver, 46 bronze. Every trophy single-player, no online trophies, about 200 hours to the platinum. Every guide is written for this page and cites its sources.</p>
+  <div class="progress-wrap" aria-label="Progress">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <p class="progress-text"><span id="progressText">0 of 55 earned · 0%</span> <span id="gradeCounts" class="grade-counts"></span></p>
+  </div>
+</header>
+
+<nav class="views" aria-label="Views">
+  <button type="button" class="view-btn active" data-view="checklist">Checklist</button>
+  <button type="button" class="view-btn" data-view="roadmap">Roadmap to Platinum</button>
+  <button type="button" class="view-btn" data-view="missable">Missable Trophies</button>
+</nav>
+
+<section class="controls" id="controls" aria-label="Filters">
+  <label class="search">Search <input id="search" type="search" placeholder="trophy name, mission, activity…" autocomplete="off"></label>
+  <div class="kind-filters" role="group" aria-label="Filter by kind">
+    <button type="button" class="kind-btn active" data-kind="all">All <span class="count" id="count-all"></span></button>
+    <button type="button" class="kind-btn" data-kind="story">Story <span class="count" id="count-story"></span></button>
+    <button type="button" class="kind-btn" data-kind="missable">Missable <span class="count" id="count-missable"></span></button>
+    <button type="button" class="kind-btn" data-kind="collectibles">Collectibles <span class="count" id="count-collectibles"></span></button>
+    <button type="button" class="kind-btn" data-kind="activities">Activities <span class="count" id="count-activities"></span></button>
+    <button type="button" class="kind-btn" data-kind="online">Online <span class="count" id="count-online"></span></button>
+  </div>
+  <label>Grade
+    <select id="grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="check"><input type="checkbox" id="earnedOnly"> Earned only</label>
+  <label class="check spoiler"><input type="checkbox" id="spoiler"> Hide story spoilers</label>
+</section>
+
+<main>
+  <section id="view-checklist" class="view">
+    <p class="hint" id="resultHint"></p>
+    <ul class="trophy-list" id="trophyList"></ul>
+    <p class="empty" id="emptyState" hidden>No trophies match these filters. Try clearing the search or picking another kind.</p>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <h2>Roadmap to the platinum — Vice Got a Price!</h2>
+    <p class="lede">One playthrough is enough, and nothing but the Chapter 1 meditation can be missed. Follow the stages in order; the checklist view tracks each stage as you go.</p>
+    <ol class="roadmap" id="roadmapList"></ol>
+    <p class="note">The 100% checklist itself only appears after the credits, under Progress, then Stats, then 100% Completion — but progress made during the story already counts. Sources: PowerPyx — GTA 6 100% Completion Checklist &amp; Guide; GTABase — GTA 6 Trophy Guide &amp; Achievements List.</p>
+  </section>
+
+  <section id="view-missable" class="view" hidden>
+    <h2>Missable trophies</h2>
+    <p class="lede">Only one trophy in the whole list can be missed — and only possibly. Everything else stays available in free roam after the credits.</p>
+    <div id="missablePanel"></div>
+    <h3>Save habits that keep you safe</h3>
+    <ul class="save-habits">
+      <li>Keep one manual save at the start of every chapter. The game has 15 manual save slots plus one autosave, and no mission replay.</li>
+      <li>Keep one untouched save from just before the final mission.</li>
+      <li>Never use cheats on your trophy save — cheats should switch off both trophies and saving.</li>
+      <li>Do the Chapter 3 race against Yago the moment it appears (hourglass icon): it is time-sensitive and its strand counts toward Strangers &amp; Freaks.</li>
+    </ul>
+    <p class="note">Sources: Output Lag — GTA 6 Trophy List: All 55 Trophies and Achievements; GTABase — GTA 6 Trophy Guide &amp; Achievements List; PowerPyx — GTA 6 100% Completion Checklist &amp; Guide.</p>
+  </section>
+</main>
+
+<footer class="actions">
+  <button id="exportBtn" type="button">Export progress</button>
+  <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+  <button id="resetBtn" type="button">Reset progress</button>
+  <p class="fineprint">Progress is saved in this browser only (localStorage). Export downloads a file you can import back on any machine. This guide is unofficial and fan-made: it shows the official trophy names and descriptions as PlayStation publishes them, and every guide is written in its own words with its sources named. No Rockstar Games logo, artwork or screenshots are used. Trophy list: Exophase and PSNProfiles, agreeing on all 55 names, descriptions and grades; guide facts: Output Lag, GTABase, PowerPyx, KeenGamer and GamesRadar+.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
